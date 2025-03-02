@@ -25,5 +25,5 @@ spec:
     - name: APP_COLOR
       value: "blue"
   imagePullSecrets:
-  - name: ecr-registry-secret
+  - name: ecr-secret
 
