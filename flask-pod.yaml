@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: employee-app
-    image: 290848585164.dkr.ecr.us-east-1.amazonaws.com/clo835_app:appv1.0
+    image: 290848585164.dkr.ecr.us-east-1.amazonaws.com/assignment2:appv1.0
     ports:
     - containerPort: 8080
     env:
@@ -23,7 +23,7 @@ spec:
     - name: DBPORT
       value: "3306"
     - name: APP_COLOR
-      value: "blue"
+      value: "green"
   imagePullSecrets:
-  - name: ecr-secret
+  - name: ecr-secret
 
