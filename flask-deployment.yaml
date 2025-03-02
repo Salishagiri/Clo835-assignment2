@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-deployment
+  name: flask-deployment
   namespace: k8s-application
 spec:
   replicas: 3
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: employee-app
-        image: 290848585164.dkr.ecr.us-east-1.amazonaws.com/clo835_app:appv1.0
+        image: 290848585164.dkr.ecr.us-east-1.amazonaws.com/assignment2:appv1.0
         ports:
         - containerPort: 8080
         env:
@@ -30,7 +30,8 @@ spec:
         - name: DBPORT
           value: "3306"
         - name: APP_COLOR
-          value: "green"  # Updated UI color
+          value: "green"
       imagePullSecrets:
       - name: ecr-secret
+
 
