@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: mysql
-    image: 290848585164.dkr.ecr.us-east-1.amazonaws.com/clo835_app:mysqlv1.0
+    image: 290848585164.dkr.ecr.us-east-1.amazonaws.com/assignment2:mysqlv1.0
     ports:
     - containerPort: 3306
     env:

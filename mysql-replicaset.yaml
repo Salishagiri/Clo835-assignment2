@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: mysql-rs
-  namespace: k8s-database  # Using existing namespace
+  namespace: k8s-database
 spec:
   replicas: 3
   selector:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: 290848585164.dkr.ecr.us-east-1.amazonaws.com/clo835_app:mysqlv1.0
+        image: 290848585164.dkr.ecr.us-east-1.amazonaws.com/assignment2:mysqlv1.0
         ports:
         - containerPort: 3306
         env:
@@ -25,5 +25,4 @@ spec:
           value: "employees"
       imagePullSecrets:
       - name: ecr-secret
-
 
