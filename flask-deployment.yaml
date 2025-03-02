@@ -30,7 +30,7 @@ spec:
         - name: DBPORT
           value: "3306"
         - name: APP_COLOR
-          value: "blue"
+          value: "green"
       imagePullSecrets:
       - name: ecr-secret
 
